@@ -10,7 +10,7 @@ namespace Series_Filename_Filter
     {
         private static string mainDirectory = "";
         private static string delimiter;
-        private static List<string> removals = new List<string>();
+        private static List<string> filters = new List<string>();
         private static List<KeyValuePair<string, string>> replacements = new List<KeyValuePair<string, string>>();
 
         private static bool running = true;
@@ -112,7 +112,7 @@ namespace Series_Filename_Filter
             Console.WriteLine("This program was made as a tool for mass renaming of TV Series file names." +
                 "\nAs of version " + version + ", this program can remove and/or replace unwanted" +
                 "\nwords. Episode file names must include episode information in one of the" +
-                "\nfollowing non-case sensitive patterns:");
+                "\nfollowing non-case-sensitive patterns:");
 
             WriteInColor("Single episodes: s01e01" +
                 "\nMulti episodes: s01e01e02",
@@ -124,6 +124,15 @@ namespace Series_Filename_Filter
             WriteInColor("\nDelimiter", ConsoleColor.Cyan, false);
             Console.WriteLine(" refers to the character separating words within a filename. " +
                 "\nTypically ' ' (space) or '.' (period).");
+            WriteInColor("\nFilters", ConsoleColor.Cyan, false);
+            Console.WriteLine(" refers to the wors within a filename that should " +
+                "\nbe completely removed.");
+            WriteInColor("\nReplacements", ConsoleColor.Cyan, false);
+            Console.WriteLine(" refers to the words within a filename that should " +
+                "\nbe replaced with other words.");
+
+            Console.Write("\nFor more information visit: ");
+            WriteInColor("https://github.com/alexgvasile/Series-Filename-Filter", ConsoleColor.Cyan, true);
 
             Console.WriteLine("\nPress ENTER key to go back...");
             Console.ReadLine();
@@ -176,9 +185,9 @@ namespace Series_Filename_Filter
                 WriteInColor("\nEnter file-name word delimiter:", ConsoleColor.Cyan, true);
                 delimiter = Console.ReadLine();
 
-                WriteInColor("\nEnter words to be removed. Spaces are retained. Separate with ',':", ConsoleColor.Cyan, true);
-                removals = Console.ReadLine().Split(',').ToList();
-                removals = RemoveEmptyElements(removals);
+                WriteInColor("\nEnter desired filters. Spaces are retained. Separate with ',':", ConsoleColor.Cyan, true);
+                filters = Console.ReadLine().Split(',').ToList();
+                filters = RemoveEmptyElements(filters);
 
                 if (option == 2)
                 {
@@ -188,7 +197,7 @@ namespace Series_Filename_Filter
                         replacements.Clear();
                         if (replacementsError) WriteInColor("Error: Can not replace the same word more than once. Try again.", ConsoleColor.Red, false);
 
-                        WriteInColor("\nEnter desired word replacements. Spaces are retained." +
+                        WriteInColor("\nEnter desired replacements. Spaces are retained." +
                             "\nSeparate old-new word pairs with ','. Separate multiple replacemenent pairs with ';'." +
                             "\nE.g.: ST,Star Trek;TNG,The Next Generation;", ConsoleColor.Cyan, true);
                         var replacementList = Console.ReadLine().Split(';').ToList();
@@ -219,8 +228,8 @@ namespace Series_Filename_Filter
                 WriteInColor(mainDirectory, ConsoleColor.Cyan, true);
                 Console.Write("Delimiter: ");
                 WriteInColor("'" + delimiter.ToString() + "'", ConsoleColor.Cyan, true);
-                Console.Write("Removals: ");
-                WriteInColor(PrintList(removals), ConsoleColor.Cyan, true);
+                Console.Write("Filters: ");
+                WriteInColor(PrintList(filters), ConsoleColor.Cyan, true);
                 if (replacements.Count > 0)
                 {
                     Console.Write("Replacements: ");
@@ -315,7 +324,7 @@ namespace Series_Filename_Filter
                     {
                         var word = fileNameWords[i];
 
-                        if (!removals.Contains(word) && !string.IsNullOrWhiteSpace(word))
+                        if (!filters.Contains(word) && !string.IsNullOrWhiteSpace(word))
                         {
                             if (replacements.Count > 0)
                             {
@@ -420,7 +429,7 @@ namespace Series_Filename_Filter
         {
             mainDirectory = "";
             delimiter = "";
-            removals.Clear();
+            filters.Clear();
             replacements.Clear();
         }
         #endregion
