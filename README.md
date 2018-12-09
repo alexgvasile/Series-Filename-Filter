@@ -37,7 +37,7 @@ The results would then look like this:
 ## Requirements & Installation
 Series Filename Filter requires [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime). 
 
-You can use the code in this repository to compile your own application or you can [Download the Installer](https://vault.alexvasile.com/series-filename-filter/Series%20Filename%20Filter.zip).
+You can use the code in this repository to compile your own application or you can [Download the Installer](https://github.com/alexgvasile/Series-Filename-Filter/releases/download/v1.0.0.0/Series.Filename.Filter.zip).
 
 ## Art Credits
 Icon made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
