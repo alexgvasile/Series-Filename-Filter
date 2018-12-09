@@ -17,7 +17,7 @@ Once at the menu screen, you'll have two funtional options. `[1] Simple Rename: 
   - e.g. `ST.TNG.S01E04.The.Code.Of.Honor.1080p.HD.mp4` would be using the delimiter period `.`
 - **Filters**: Refers to the repeating words to be completely removed from the filename. These should be entered as a comma (,) delimited list. Spaces are retained so do not add any unless necessary and never in the case where your delimiter is already a space.
   - e.g. To remove the words `TNG`, `1080p` and `HD` in the above example, the filter list would look like this: `TNG,1080p,HD`
-- **Replacements**: Refers to the pairs of words to be replaced and their replacement values. These should be entered as a list where elements of a * *Old Word/New word* * pair should be delimited by a comma (,) and complete pairs should be delimited by a semicolon (;).
+- **Replacements**: Refers to the pairs of words to be replaced and their replacement values. These should be entered as a list where elements of a **Old Word/New word** pair should be delimited by a comma (,) and complete pairs should be delimited by a semicolon (;).
   - e.g. To replace the word `ST` with `Star Trek` and the word `TNG` with `The Next Generation` in the example above, the replacement list would look like this: `ST,Star Trek;TNG,The Next Generation;`
 
 ## A Complete Example
