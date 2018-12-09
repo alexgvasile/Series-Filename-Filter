@@ -34,5 +34,10 @@ The results would then look like this:
 - **Old Filename**: `ST.TNG.S01E05.The.Last.Outpost.1080p.HD.mp4`
 - **New Filename**: `Star Trek The Next Generation - s01e05 - The Last Outpost.mp4`
 
+## Requirements & Installation
+Series Filename Filter requires that you install [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime). Alternatively you can [Download the Installer](https://vault.alexvasile.com/series-filename-filter/Series%20Filename%20Filter.zip)
+
+If you prefer you can also use the code in this repository to complile your own application.
+
 ## Art Credits
 Icon made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
