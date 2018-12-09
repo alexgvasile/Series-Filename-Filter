@@ -388,7 +388,7 @@ namespace Series_Filename_Filter
         }
 
         #region Non-core methods
-        public static void WriteInColor(string text, ConsoleColor color, bool writeLine)
+        private static void WriteInColor(string text, ConsoleColor color, bool writeLine)
         {
             if (writeLine)
             {
@@ -405,7 +405,7 @@ namespace Series_Filename_Filter
             }
         }
 
-        public static string PrintList(List<string> list)
+        private static string PrintList(List<string> list)
         {
             string outputString = "";
             for (int i = 0; i < list.Count; i++)
@@ -420,12 +420,12 @@ namespace Series_Filename_Filter
             return outputString;
         }
 
-        public static List<string> RemoveEmptyElements(List<string> list)
+        private static List<string> RemoveEmptyElements(List<string> list)
         {
             return new List<string>(list.Where(element => !string.IsNullOrWhiteSpace(element)).Distinct().ToList());
         }
 
-        public static void ResetDefaults()
+        private static void ResetDefaults()
         {
             mainDirectory = "";
             delimiter = "";
