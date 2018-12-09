@@ -35,4 +35,4 @@ The results would then look like this:
 - **New Filename**: `Star Trek The Next Generation - s01e05 - The Last Outpost.mp4`
 
 ## Art Credits
-Icon made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+Icon made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/)
