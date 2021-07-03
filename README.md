@@ -8,7 +8,7 @@ As of version 1.0.0.0, this tool includes functionality to remove and/or replace
 
 This tool will format new filenames to abide by the rules set out by PLEX, found here: [Naming ‘Series’ & ‘Season’ Based TV Shows](https://support.plex.tv/articles/200220687-naming-series-season-based-tv-shows/).
 
-## Hot To Use
+## How To Use
 Once at the menu screen, you'll have two funtional options. `[1] Simple Rename: Removals Only`, which will **not** allow you to change words, only to remove them, or `[2]Complex Rename: Removals and Replacements`, which will allow for replacements as well. You will be asked to enter 3 or 4 parameters based on your choice. These parameters are described below:
 - **Main Directory**: Refers to the parent directory/folder containing the TV Series' seasons folders.
   - e.g.: `C:\Users\<USER_NAME>\Documents\Star Trek TNG\`
